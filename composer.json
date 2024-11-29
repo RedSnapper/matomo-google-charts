@@ -1,0 +1,54 @@
+{
+  "name": "rs/matomo-google-charts",
+  "version": "1.0.0",
+  "description": "A package for creating an analytics dashboard using Matomo data and Google Charts",
+  "keywords": [
+    "rs",
+    "matomo"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Matthew Cammack",
+      "email": "matthew.cammack@redsnapper.net"
+    },
+    {
+      "name": "Joe Abousselam",
+      "email": "joe@redsnapper.net"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "spatie/data-transfer-object": "^3.9",
+    "robbrazier/piwik": "^4.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "RedSnapper\\MatomoCharts\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "RedSnapper\\MatomoCharts\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^9.0",
+    "phpunit/phpunit": "^11.4"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "RedSnapper\\MatomoCharts\\MatomoChartServiceProvider"
+      ],
+      "aliases": {
+        "MatomoChart": "RedSnapper\\MatomoCharts\\Facades\\MatomoChart"
+      }
+    }
+  }
+}
