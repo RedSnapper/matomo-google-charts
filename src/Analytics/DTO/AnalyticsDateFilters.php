@@ -23,12 +23,12 @@ class AnalyticsDateFilters
 
     private function setDateFilters(Request $request): void
     {
-        $this->startDate = ($request->get('dateFrom') !== null
-            ? Carbon::parse($request->get('dateFrom'))
+        $this->startDate = ($request->input('dateFrom') !== null
+            ? Carbon::parse($request->input('dateFrom'))
             : Carbon::now()->subMonth()->startOfMonth());
 
-        $this->endDate = ($request->get('dateTo') !== null
-            ? Carbon::parse($request->get('dateTo'))
+        $this->endDate = ($request->input('dateTo') !== null
+            ? Carbon::parse($request->input('dateTo'))
             : Carbon::now()->subMonth()->endOfMonth());
     }
 

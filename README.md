@@ -4,7 +4,7 @@ A Laravel package for building analytics dashboards using data from [Matomo](htt
 
 ## Requirements
 
-- PHP 8.1+
+- PHP 8.3+
 - Laravel 10+
 
 ## Installation

@@ -16,6 +16,7 @@ class MatomoAPIFake implements MatomoAPIInterface
     public string $date;
     public string $cacheName;
     public string $segment;
+    public ?string $siteId = null;
     public Collection $result;
 
     public function __construct()
