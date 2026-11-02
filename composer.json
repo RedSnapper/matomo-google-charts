@@ -1,6 +1,5 @@
 {
   "name": "rs/matomo-google-charts",
-  "version": "1.0.0",
   "description": "A package for creating an analytics dashboard using Matomo data and Google Charts",
   "keywords": [
     "rs",
